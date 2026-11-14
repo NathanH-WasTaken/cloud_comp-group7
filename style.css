@@ -1,4 +1,5 @@
 body {
+    background: #f3ead7;
     margin: 0;
     min-height: 100vh;
     display: flex;
@@ -7,6 +8,70 @@ body {
 
 main {
     flex: 1;
+}
+
+/* ----- DOWNLOADS PAGE CSS ----- */
+
+/* 3 cards per row */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1100px;
+    margin: 32px auto;
+    padding: 0 24px;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr 140px;
+    gap: 16px;
+    padding: 20px;
+    background: #13294b;
+    color: #e6edf7;
+    border-radius: 12px;
+}
+
+.card:hover {
+    background: #1a3560;
+}
+
+.card h2 {
+    margin: 0 0 12px;
+    font-size: 24px;
+    color: white;
+}
+
+.card p {
+    margin: 4px 0;
+    font-size: 14px;
+    color: #9db0cc;
+}
+
+.card img {
+    width: 140px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.download-btn {
+    grid-column: 2;
+    justify-self: end;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    color: #0b1f3a;
+    border-radius: 8px;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+.download-btn:hover {
+    background: #5ab0ff;
 }
 
 /* Navbar */
