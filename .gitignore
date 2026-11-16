@@ -1,0 +1,17 @@
+# JetBrains IDEs (IntelliJ IDEA, WebStorm, PyCharm)
+.idea/
+*.iml
+
+# macOS
+.DS_Store
+
+# VS Code local settings
+.vscode/
+
+# Node dependencies (if added later)
+node_modules/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example

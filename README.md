@@ -19,3 +19,22 @@ This is where the image gallery will be.
 
 ## style.css
 This is where all styling will be.
+
+## Anime Search & Filter
+
+The search feature runs entirely in the browser with local sample data; it does not require AWS, an API, a database, or credentials.
+
+To test it locally:
+
+1. Open `search.html` directly in a web browser, or serve the repository with a simple local web server and visit `/search.html`.
+2. Type part of an anime title in the search field. Matching is case-insensitive and updates immediately.
+3. Choose a genre to filter the cards. The title and genre filters can be used together.
+4. Enter a title that is not in the sample data to verify the empty state.
+
+Feature files:
+
+- `search.html` contains the accessible search controls, results area, navigation, and footer.
+- `search.js` contains the local anime dataset, filtering logic, and card rendering.
+- `style.css` contains the responsive, feature-specific search styles.
+- `index.html`, `gallery.html`, and `downloads.html` include the Search navigation link.
+- `tests/search.test.js` verifies title matching, genre filtering, combined filters, empty input, and zero results using Node's built-in test runner (`node --test tests/search.test.js`).
