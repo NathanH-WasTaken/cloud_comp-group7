@@ -120,3 +120,225 @@ main {
 .footer p {
     margin: 4px 0;
 }
+
+/* ----- SEARCH PAGE CSS ----- */
+
+.search-page {
+    width: min(1120px, calc(100% - 48px));
+    margin: 0 auto;
+    padding: 56px 0 64px;
+}
+
+.search-header {
+    max-width: 720px;
+    margin-bottom: 28px;
+}
+
+.search-header h1 {
+    margin: 4px 0 12px;
+    color: #0b1f3a;
+    font-size: clamp(34px, 6vw, 54px);
+    line-height: 1.05;
+}
+
+.search-header > p:last-child {
+    margin: 0;
+    color: #40516a;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.search-eyebrow {
+    margin: 0;
+    color: #17619e;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.search-panel {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(190px, 1fr);
+    gap: 18px;
+    padding: 22px;
+    background: #13294b;
+    border-radius: 14px;
+    box-shadow: 0 12px 28px rgba(11, 31, 58, 0.16);
+}
+
+.search-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.search-field label {
+    color: #e6edf7;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.search-field input,
+.search-field select {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 48px;
+    padding: 11px 13px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background: white;
+    color: #0b1f3a;
+    font: inherit;
+}
+
+.search-field input:focus,
+.search-field select:focus {
+    border-color: #5ab0ff;
+    outline: 3px solid rgba(90, 176, 255, 0.35);
+    outline-offset: 2px;
+}
+
+.results-section {
+    margin-top: 34px;
+}
+
+.results-summary {
+    min-height: 20px;
+    margin: 0 0 16px;
+    color: #40516a;
+    font-weight: bold;
+}
+
+.anime-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.anime-card {
+    overflow: hidden;
+    background: #13294b;
+    color: #e6edf7;
+    border-radius: 12px;
+    box-shadow: 0 8px 18px rgba(11, 31, 58, 0.14);
+    transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.anime-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px rgba(11, 31, 58, 0.2);
+}
+
+.anime-card-media {
+    height: 160px;
+    background: linear-gradient(135deg, #1a3560, #17619e);
+}
+
+.anime-card-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.anime-placeholder {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 72px;
+    font-weight: bold;
+}
+
+.anime-card-content {
+    padding: 20px;
+}
+
+.anime-card-content h2 {
+    margin: 7px 0 10px;
+    color: white;
+    font-size: 21px;
+    line-height: 1.25;
+}
+
+.anime-genre {
+    display: inline-block;
+    margin: 0;
+    padding: 4px 9px;
+    background: rgba(90, 176, 255, 0.16);
+    color: #8ecaff;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.anime-description {
+    margin: 0;
+    color: #b8c5d8;
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+.empty-state {
+    padding: 46px 24px;
+    border: 2px dashed #9db0cc;
+    border-radius: 12px;
+    color: #40516a;
+    text-align: center;
+}
+
+.empty-state h2 {
+    margin: 0 0 8px;
+    color: #0b1f3a;
+}
+
+.empty-state p {
+    margin: 0;
+}
+
+@media (max-width: 850px) {
+    .anime-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        height: auto;
+        min-height: 60px;
+        padding: 12px 18px;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .nav-links {
+        position: static;
+        transform: none;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 20px;
+    }
+
+    .search-page {
+        width: min(100% - 32px, 1120px);
+        padding: 38px 0 48px;
+    }
+
+    .search-panel,
+    .anime-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .search-panel {
+        padding: 18px;
+    }
+
+    .anime-card-media {
+        height: 190px;
+    }
+}
