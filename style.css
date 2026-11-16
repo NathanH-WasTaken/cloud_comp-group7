@@ -342,3 +342,36 @@ main {
         height: 190px;
     }
 }
+
+.gallery-grid {
+    align-items: start;
+}
+
+.anime-card summary {
+    cursor: pointer;
+    list-style: none;
+}
+.gallery-grid .anime-card-media {
+    height: 240px;
+}
+.gallery-grid .anime-card-media img {
+    object-fit: contain;
+}
+.anime-card summary::-webkit-details-marker {
+    display: none;
+}
+
+.add-btn{
+    margin-bottom: 20px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 9px;
+    background: #13294b;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.add-btn:hover{
+    background: #1a3560;
+}
